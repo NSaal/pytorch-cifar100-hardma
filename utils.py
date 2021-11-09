@@ -152,6 +152,36 @@ def get_network(args):
     elif args.net == 'stochasticdepth101':
         from models.stochasticdepth import stochastic_depth_resnet101
         net = stochastic_depth_resnet101()
+    elif args.net == 'hresnet18':
+        from models.resnet_hadmr import hresnet18
+        net = hresnet18()
+    elif args.net == 'hresnet34':
+        from models.resnet_hadmr import hresnet34
+        net = hresnet34()
+    elif args.net == 'hresnet50':
+        from models.resnet_hadmr import hresnet50
+        net = hresnet50()
+    elif args.net == 'hresnet101':
+        from models.resnet_hadmr import hresnet101
+        net = hresnet101()
+    elif args.net == 'hresnet152':
+        from models.resnet_hadmr import hresnet152
+        net = hresnet152()
+    elif args.net == 'dresnet18':
+        from models.resnet_dct import dresnet18
+        net = dresnet18()
+    elif args.net == 'dresnet34':
+        from models.resnet_dct import dresnet34
+        net = dresnet34()
+    elif args.net == 'dresnet50':
+        from models.resnet_dct import dresnet50
+        net = dresnet50()
+    elif args.net == 'dresnet101':
+        from models.resnet_dct import dresnet101
+        net = dresnet101()
+    elif args.net == 'dresnet152':
+        from models.resnet_dct import dresnet152
+        net = dresnet152()
 
     else:
         print('the network name you have entered is not supported yet')
